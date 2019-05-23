@@ -1,0 +1,900 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#pageContain {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bgm_btn {
+  position: fixed;
+  top: 0.53333333rem;
+  right: 0.53333333rem;
+  width: 0.68rem;
+  height: 0.68rem;
+  background: url('../image/audio/bgmBtn-fbd2dc.svg') no-repeat;
+  background-size: contain;
+  z-index: 999;
+  animation: move 1s linear  infinite;
+  animation-play-state: running;
+}
+.arrow {
+  width: 0.30666667rem;
+  height: 0.4rem;
+  position: fixed;
+  bottom: 0.26666667rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+}
+.arrow .arrow_left {
+  width: 0.12rem;
+  height: 80%;
+  background: #fff;
+  border-radius: 0.13333333rem;
+  box-shadow: 1px 1px 1px #646464;
+  transform: rotate(40deg);
+}
+.arrow .arrow_right {
+  width: 0.12rem;
+  height: 80%;
+  background: #fff;
+  border-radius: 0.13333333rem;
+  box-shadow: -1px -1px 1px #646464;
+  transform: rotate(140deg);
+}
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.mask_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #d6eff8;
+}
+.mask_box .backCo {
+  width: 100%;
+  height: 50%;
+  z-index: 6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to bottom, #edf8fc, #d6eff8);
+}
+.mask_box .backCo1 {
+  width: 100%;
+  height: 50%;
+  z-index: 6;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to top, #edf8fc, #d6eff8);
+}
+.mask_box .ma_heart_left {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  position: absolute;
+  top: 5.06666667rem;
+  left: 2.46666667rem;
+  transform: translate(-0.93333333rem, 0);
+}
+.mask_box .ma_heart_left img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.mask_box .ma_heart_left img {
+  height: 100%;
+  transform: rotate(-180deg);
+}
+.mask_box .ma_heart_right {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  position: absolute;
+  top: 5.06666667rem;
+  left: 3.86666667rem;
+  transform: translate(0.93333333rem, 0);
+}
+.mask_box .ma_heart_right img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.mask_box .ma_heart_right img {
+  height: 100%;
+  transform: rotate(180deg);
+}
+.mask_box .mask_text {
+  width: 100%;
+  height: 0.66666667rem;
+  position: absolute;
+  top: 6.33333333rem;
+  left: 0rem;
+  text-align: center;
+}
+.mask_box .mask_text img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.mask_box .mask_text span {
+  display: block;
+  font-family: FZShuTi;
+  font-size: 0.4rem;
+  color: #676767;
+  line-height: 0.66666667rem;
+}
+.first_screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.first_screen .content_box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow: initial;
+  margin-top: 1.06666667rem;
+  position: relative;
+}
+.first_screen .content_box .bg_img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -1.06666667rem;
+  left: 0;
+}
+.first_screen .content_box .bg_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .back_img {
+  width: 110%;
+  height: 80%;
+  position: absolute;
+  bottom: 0.33333333rem;
+  left: -0.49333333rem;
+}
+.first_screen .content_box .back_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .love {
+  width: 0.72rem;
+  height: 0.72rem;
+  position: absolute;
+  top: 0.30666667rem;
+  right: 0.44rem;
+}
+.first_screen .content_box .love img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .meet_box {
+  width: 5.06666667rem;
+  height: 2.93333333rem;
+  position: absolute;
+  top: 1.06666667rem;
+  left: 0.93333333rem;
+}
+.first_screen .content_box .meet_box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .ni {
+  width: 1.53333333rem;
+  height: 1.26666667rem;
+  position: absolute;
+  top: 1.26666667rem;
+  left: 3.53333333rem;
+}
+.first_screen .content_box .ni img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .ai {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 2.33333333rem;
+  left: 5.13333333rem;
+}
+.first_screen .content_box .ai img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_top {
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  position: absolute;
+  top: 0.8rem;
+  left: 4.86666667rem;
+}
+.first_screen .content_box .heart_top img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_bottom {
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  position: absolute;
+  top: 2.13333333rem;
+  left: 6.53333333rem;
+}
+.first_screen .content_box .heart_bottom img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .text {
+  width: 100%;
+  height: 0.66666667rem;
+  position: absolute;
+  top: 4.06666667rem;
+  left: 0rem;
+  text-align: center;
+}
+.first_screen .content_box .text img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .text span {
+  display: block;
+  font-family: FZShuTi;
+  font-size: 0.4rem;
+  color: #676767;
+  line-height: 0.66666667rem;
+}
+.first_screen .content_box .pic {
+  width: 5.33333333rem;
+  height: 4.8rem;
+  position: absolute;
+  top: 5.06666667rem;
+  left: 1.14666667rem;
+}
+.first_screen .content_box .pic img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .hid_pic {
+  width: 4rem;
+  height: 3.66666667rem;
+  position: absolute;
+  top: 5.66666667rem;
+  left: 1.8rem;
+}
+.first_screen .content_box .hid_pic img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .hid_pic .mask {
+  width: 100%;
+  height: 100%;
+  -webkit-mask-box-image-source: url('../image/one/heart-d692b9.svg');
+  -webkit-mask-box-image-slice: initial;
+  -webkit-mask-box-image-width: initial;
+  -webkit-mask-box-image-outset: initial;
+  -webkit-mask-box-image-repeat: initial;
+  overflow: hidden;
+}
+.first_screen .content_box .hid_pic .mask img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_1 {
+  width: 0.86666667rem;
+  height: 0.86666667rem;
+  position: absolute;
+  top: 4.53333333rem;
+  left: 1rem;
+}
+.first_screen .content_box .heart_1 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_2 {
+  width: 0.86666667rem;
+  height: 0.86666667rem;
+  position: absolute;
+  top: 4.53333333rem;
+  left: 5.8rem;
+}
+.first_screen .content_box .heart_2 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_3 {
+  width: 1.86666667rem;
+  height: 1.86666667rem;
+  position: absolute;
+  top: 8.13333333rem;
+  left: 0.66666667rem;
+}
+.first_screen .content_box .heart_3 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_4 {
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 8.13333333rem;
+  left: 5.6rem;
+}
+.first_screen .content_box .heart_4 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_5 {
+  width: 1.86666667rem;
+  height: 1.86666667rem;
+  position: absolute;
+  top: 9.33333333rem;
+  left: 3.2rem;
+}
+.first_screen .content_box .heart_5 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_6 {
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  position: absolute;
+  top: 7.33333333rem;
+  left: 0.66666667rem;
+}
+.first_screen .content_box .heart_6 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_7 {
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  position: absolute;
+  top: 7.33333333rem;
+  left: 6.53333333rem;
+}
+.first_screen .content_box .heart_7 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_8 {
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  position: absolute;
+  top: 8.66666667rem;
+  left: 4.53333333rem;
+}
+.first_screen .content_box .heart_8 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_9 {
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  position: absolute;
+  top: 9.33333333rem;
+  left: 2.93333333rem;
+}
+.first_screen .content_box .heart_9 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.first_screen .content_box .heart_10 {
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  position: absolute;
+  top: 9.86666667rem;
+  left: 1.86666667rem;
+}
+.first_screen .content_box .heart_10 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.second_screen .content_box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow: initial;
+  margin-top: 1.06666667rem;
+  position: relative;
+}
+.second_screen .content_box .bg_img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -1.06666667rem;
+  left: 0;
+}
+.second_screen .content_box .bg_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .back_img {
+  width: 110%;
+  height: 80%;
+  position: absolute;
+  bottom: 0.33333333rem;
+  left: -0.49333333rem;
+}
+.second_screen .content_box .back_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .meet_box {
+  width: 3.06666667rem;
+  height: 1.73333333rem;
+  position: absolute;
+  top: 0.53333333rem;
+  left: 3.66666667rem;
+}
+.second_screen .content_box .meet_box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .ni {
+  width: 0.93333333rem;
+  height: 0.66666667rem;
+  position: absolute;
+  top: 0.66666667rem;
+  left: 5.26666667rem;
+}
+.second_screen .content_box .ni img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .ai {
+  width: 1rem;
+  height: 0.97333333rem;
+  position: absolute;
+  top: 1.2rem;
+  left: 6.24rem;
+}
+.second_screen .content_box .ai img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .weat {
+  width: 3.2rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+}
+.second_screen .content_box .weat img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .meinv {
+  width: 3.13333333rem;
+  height: 3.30666667rem;
+  position: absolute;
+  top: 2rem;
+  left: 0.86666667rem;
+}
+.second_screen .content_box .meinv img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .meinv .mask {
+  width: 100%;
+  height: 100%;
+  -webkit-mask-box-image-source: url('../image/one/heart-d692b9.svg');
+  -webkit-mask-box-image-slice: initial;
+  -webkit-mask-box-image-width: initial;
+  -webkit-mask-box-image-outset: initial;
+  -webkit-mask-box-image-repeat: initial;
+  overflow: hidden;
+}
+.second_screen .content_box .meinv .mask img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .meinv_two {
+  width: 2.8rem;
+  height: 2.53333333rem;
+  position: absolute;
+  top: 3.33333333rem;
+  left: 3.86666667rem;
+  transform: rotateZ(20deg);
+}
+.second_screen .content_box .meinv_two img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .meinv_two .mask {
+  width: 100%;
+  height: 100%;
+  -webkit-mask-box-image-source: url('../image/one/heart-d692b9.svg');
+  -webkit-mask-box-image-slice: initial;
+  -webkit-mask-box-image-width: initial;
+  -webkit-mask-box-image-outset: initial;
+  -webkit-mask-box-image-repeat: initial;
+  overflow: hidden;
+}
+.second_screen .content_box .meinv_two .mask img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .heart {
+  width: 0.41333333rem;
+  height: 0.41333333rem;
+  position: absolute;
+  top: 2.73333333rem;
+  left: 5.6rem;
+}
+.second_screen .content_box .heart img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .text {
+  width: 100%;
+  height: 0.6rem;
+  position: absolute;
+  top: 4.86666667rem;
+  left: 0.93333333rem;
+  text-align: left;
+}
+.second_screen .content_box .text img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .text span {
+  display: block;
+  font-family: FZShuTi;
+  font-size: 0.42666667rem;
+  color: #676767;
+  line-height: 0.6rem;
+}
+.second_screen .content_box .meinv_three {
+  width: 5.73333333rem;
+  height: 3.49333333rem;
+  position: absolute;
+  top: 6.26666667rem;
+  left: 0.93333333rem;
+}
+.second_screen .content_box .meinv_three img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .heart_one {
+  width: 1.33333333rem;
+  height: 1.24rem;
+  position: absolute;
+  top: 5.53333333rem;
+  left: 5.86666667rem;
+}
+.second_screen .content_box .heart_one img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .heart_two {
+  width: 0.86666667rem;
+  height: 0.93333333rem;
+  position: absolute;
+  top: 9.2rem;
+  left: 0.33333333rem;
+}
+.second_screen .content_box .heart_two img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .text_two {
+  width: 100%;
+  height: 0.6rem;
+  position: absolute;
+  top: 9.93333333rem;
+  left: 0rem;
+  text-align: center;
+}
+.second_screen .content_box .text_two img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.second_screen .content_box .text_two span {
+  display: block;
+  font-weight: bolder;
+  font-family: STHeiti;
+  font-size: 0.30666667rem;
+  color: #00000085;
+  line-height: 0.53333333rem;
+}
+.third_screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.third_screen .content_box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow: initial;
+  margin-top: 1.06666667rem;
+  position: relative;
+}
+.third_screen .content_box .bg_img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -1.06666667rem;
+  left: 0;
+}
+.third_screen .content_box .bg_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .back_img {
+  width: 110%;
+  height: 80%;
+  position: absolute;
+  bottom: 0.33333333rem;
+  left: -0.49333333rem;
+}
+.third_screen .content_box .back_img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .meet_box {
+  width: 3.13333333rem;
+  height: 1.73333333rem;
+  position: absolute;
+  top: 8.8rem;
+  left: 3.33333333rem;
+}
+.third_screen .content_box .meet_box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .ni {
+  width: 1rem;
+  height: 0.72rem;
+  position: absolute;
+  top: 8.86666667rem;
+  left: 4.93333333rem;
+}
+.third_screen .content_box .ni img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .ai {
+  width: 1rem;
+  height: 0.93333333rem;
+  position: absolute;
+  top: 9.46666667rem;
+  left: 5.93333333rem;
+}
+.third_screen .content_box .ai img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .just {
+  width: 3.46666667rem;
+  height: 0.37333333rem;
+  position: absolute;
+  top: 0.37333333rem;
+  left: 3.46666667rem;
+}
+.third_screen .content_box .just img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .mohu {
+  width: 4rem;
+  height: 0.10666667rem;
+  position: absolute;
+  top: 0.93333333rem;
+  left: 2.93333333rem;
+}
+.third_screen .content_box .mohu img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .text {
+  position: absolute;
+  top: 1.2rem;
+  left: 2.2rem;
+  text-align: left;
+  letter-spacing: 0px;
+}
+.third_screen .content_box .text span {
+  display: block;
+  font-family: FangSong;
+  font-size: 0.32rem;
+  color: #1d1c1c;
+  line-height: 0.6rem;
+}
+.third_screen .content_box .hreat {
+  width: 1.09333333rem;
+  height: 1.14666667rem;
+  position: absolute;
+  top: 0.93333333rem;
+  left: 0.86666667rem;
+}
+.third_screen .content_box .hreat img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .meinv {
+  width: 5.4rem;
+  height: 4rem;
+  position: absolute;
+  top: 2rem;
+  left: 0.66666667rem;
+}
+.third_screen .content_box .meinv img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .meinv .mask {
+  width: 100%;
+  height: 100%;
+  -webkit-mask-box-image-source: url('../image/one/heart-d692b9.svg');
+  -webkit-mask-box-image-slice: initial;
+  -webkit-mask-box-image-width: initial;
+  -webkit-mask-box-image-outset: initial;
+  -webkit-mask-box-image-repeat: initial;
+  overflow: hidden;
+}
+.third_screen .content_box .meinv .mask img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .heart_1 {
+  width: 0.90666667rem;
+  height: 0.90666667rem;
+  position: absolute;
+  top: 4.4rem;
+  left: 5.73333333rem;
+}
+.third_screen .content_box .heart_1 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .heart_2 {
+  width: 0.4rem;
+  height: 0.46666667rem;
+  position: absolute;
+  top: 5.33333333rem;
+  left: 1.06666667rem;
+}
+.third_screen .content_box .heart_2 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .heart_3 {
+  width: 0.4rem;
+  height: 0.46666667rem;
+  position: absolute;
+  top: 5.46666667rem;
+  left: 1.86666667rem;
+}
+.third_screen .content_box .heart_3 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .text1 {
+  width: 3.86666667rem;
+  height: 0.46666667rem;
+  position: absolute;
+  top: 6.2rem;
+  left: 0.8rem;
+  text-align: left;
+  letter-spacing: 0px;
+}
+.third_screen .content_box .text1 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .text1 span {
+  display: block;
+  font-family: FangSong_GB2312;
+  font-size: 0.32rem;
+  color: #1d1c1c;
+  line-height: 0.6rem;
+}
+.third_screen .content_box .meinv2 {
+  width: 2.26666667rem;
+  height: 3.06666667rem;
+  position: absolute;
+  top: 5.46666667rem;
+  left: 4.66666667rem;
+}
+.third_screen .content_box .meinv2 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.third_screen .content_box .meinv3 {
+  width: 2.26666667rem;
+  height: 3.06666667rem;
+  position: absolute;
+  top: 7.73333333rem;
+  left: 0.8rem;
+}
+.third_screen .content_box .meinv3 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

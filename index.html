@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/rem.js"></script>
+	<script src="./js/zepto.js"></script>
+	<title>H5</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		/*框架*/
+		body {
+			overflow: hidden;
+		}
+
+		.page-wrap {
+			overflow: hidden
+		}
+
+		.page {
+			display: none;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 0
+		}
+
+		.contain {
+			width: 100%;
+			height: 100%;
+			/* display: none; */
+			position: relative;
+			z-index: 0
+		}
+
+		.current .contain,
+		.slide .contain {
+			display: block
+		}
+
+		.current {
+			display: block;
+			z-index: 1
+		}
+
+		.slide {
+			display: block;
+			z-index: 2
+		}
+
+		.swipe {
+			display: block;
+			z-index: 3;
+			transition-duration: 0ms !important;
+			-webkit-transition-duration: 0ms !important
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="bgm_btn"></div>
+	<audio src="./image/audio/麦小兜+校长+-+甜了个蜜.flac" id="audio" autoplay loop preload="auto"></audio>
+	<div class="arrow animated2 fadeInUp infinite">
+		<div class="arrow_left"></div>
+		<div class="arrow_right"></div>
+	</div>
+	<div id="pageContain" class="page-wrap">
+	
+		<div class="page page1 current">
+			<div class="first_screen contain">
+				<ul class="mask_box animated fadeOut delay-2s ">
+					<div class="backCo animated1 fadeOut1"></div>
+					<li class="ma_heart_left animated late_left">
+						<img class="animated rotate_left" src="image/one/redHeart.png" alt="">
+					</li>
+					<li class="ma_heart_right animated late_right">
+						<img class="animated rotate_right" src="image/one/blueHear.png" alt="">
+					</li>
+					<li class="mask_text animated fadeInDown">
+						<span>一直以来我想告诉你</span>
+					</li>
+					<div class="backCo1 animated1 fadeOut1"></div>
+				</ul>
+				<ul class="content_box">
+					<li class="bg_img">
+						<img class="animated zoomOut delay-2bans" src="image/audio/1.jpg" alt="">
+					</li>
+					<li class="back_img">
+						<img class="animated fadeIn delay-3s" src="image/one/bg.png" alt="">
+					</li>
+					<li class="love">
+						<img src="image/one/aini.png" alt="">
+					</li>
+					<li class="meet_box">
+						<img src="image/one/yujian.png" alt="">
+					</li>
+					<li class="ni animated scale1 delay-4bans slow infinite">
+						<img src="image/one/ni.png" alt="">
+					</li>
+					<li class="ni">
+						<img src="image/one/ni.png" alt="">
+					</li>
+					<li class="ai animated scale1 delay-4s slow infinite">
+						<img src="image/one/ai.png" alt="">
+					</li>
+					<li class="ai">
+						<img src="image/one/ai.png" alt="">
+					</li>
+					<li class="heart_top">
+						<img src="image/one/xin.png" alt="">
+					</li>
+					<li class="heart_bottom">
+						<img src="image/one/xin2.png" alt="">
+					</li>
+					<li class="text">
+						<span>~~ 想要和你在一起 ~~</span>
+					</li>
+					<li class="pic animated zoomOut1 delay-3s">
+						<img src="image/one/kung.png" alt="">
+					</li>
+					<li class="hid_pic animated zoomIn delay-3s">
+						<div class="mask">
+							<img src="image/one/pic.jpg" alt="">
+						</div>
+					</li>
+					<li class="heart_1 animated scale delay-3bans slow infinite">
+						<img src="image/one/xin3.png" alt="">
+					</li>
+					<li class="heart_2 animated scale delay-3s">
+						<img src="image/one/xin4.png" alt="">
+					</li>
+					<li class="heart_3 animated scale delay-3bans">
+						<img src="image/one/xin5.png" alt="">
+					</li>
+					<li class="heart_4 animated scale delay-3s">
+						<img src="image/one/xin6.png" alt="">
+					</li>
+					<li class="heart_5 animated scale delay-2bans">
+						<img src="image/one/xin7.png" alt="">
+					</li>
+					<li class="heart_6 animated scale delay-4s">
+						<img src="image/one/xin.png" alt="">
+					</li>
+					<li class="heart_7 animated scale delay-4s">
+						<img src="image/one/xin8.png" alt="">
+					</li>
+					<li class="heart_8 animated scale delay-4s">
+						<img src="image/one/xin9.png" alt="">
+					</li>
+					<li class="heart_9 animated scale delay-4s">
+						<img src="image/one/xin10.png" alt="">
+					</li>
+					<li class="heart_10 animated scale delay-4s">
+						<img src="image/one/xin11.png" alt="">
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="page page2">
+			<div class="second_screen contain">
+				<ul class="mask_box animated fadeOut delay-2s ">
+					<div class="backCo animated1 fadeOut1"></div>
+					<li class="ma_heart_left animated late_left">
+						<img class="animated rotate_left" src="image/one/redHeart.png" alt="">
+					</li>
+					<li class="ma_heart_right animated late_right">
+						<img class="animated rotate_right" src="image/one/blueHear.png" alt="">
+					</li>
+					<li class="mask_text animated fadeInDown">
+						<span>一生中最美的相遇</span>
+					</li>
+					<div class="backCo1 animated1 fadeOut1"></div>
+				</ul>
+				<ul class="content_box">
+					<li class="bg_img">
+						<img class="animated zoomOut delay-2bans" src="image/audio/1.jpg" alt="">
+					</li>
+					<li class="back_img">
+						<img class="animated fadeIn delay-3s" src="image/one/bg.png" alt="">
+					</li>
+					<li class="love">
+						<img src="image/one/aini.png" alt="">
+					</li>
+					<li class="meet_box">
+						<img src="image/one/yujian.png" alt="">
+					</li>
+					<li class="ni animated scale1 delay-4bans slow infinite">
+						<img src="image/one/ni.png" alt="">
+					</li>
+					<li class="ni">
+						<img src="image/one/ni.png" alt="">
+					</li>
+					<li class="ai animated scale1 delay-4s slow infinite">
+						<img src="image/one/ai.png" alt="">
+					</li>
+					<li class="ai">
+						<img src="image/one/ai.png" alt="">
+					</li>
+					<li class="weat animated fadeIn delay-3s">
+						<img src="image/two/weat.png" alt="">
+					</li>
+					<li class="meinv animateds rotateInLeft delay-2bans">
+						<div class="mask">
+							<img src="image/two/meinv.jpg" alt="">
+						</div>
+					</li>
+					<li class="meinv_two animateds rotateInRight delay-2bans">
+						<div class="mask">
+							<img src="image/two/meinv2.jpg" alt="">
+						</div>
+					</li>
+					<li class="heart">
+						<img src="image/two/heart.png" alt="">
+					</li>
+					<li class="text animated fadeIn delay-4s">
+						<span>
+							那一天</br>
+							只为守候你到来
+						</span>
+					</li>
+					<li class="meinv_three animated zoomIn delay-4bans">
+						<img src="image/two/meinv3.jpg" alt="">
+					</li>
+					<li class="heart_one animated scale delay-3s slow infinite">
+						<img src="image/two/heart1.png" alt="">
+					</li>
+					<li class="heart_two animated zoomIn delay-5s">
+						<img src="image/two/heart2.png" alt="">
+					</li>
+					<li class="text_two animated fadeIn delay-5bans">
+						<span>
+							能遇见就是缘，哪怕就匆匆一眼;</br>
+							我们注定要相恋，不改变。
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="page page3">
+			<div class="third_screen contain">
+				<ul class="mask_box animated fadeOut delay-2s ">
+					<div class="backCo animated1 fadeOut1"></div>
+					<li class="ma_heart_left animated late_left">
+						<img class="animated rotate_left" src="image/one/redHeart.png" alt="">
+					</li>
+					<li class="ma_heart_right animated late_right">
+						<img class="animated rotate_right" src="image/one/blueHear.png" alt="">
+					</li>
+					<li class="mask_text animated fadeInDown">
+						<span>有你陪伴的美好温暖</span>
+					</li>
+					<div class="backCo1 animated1 fadeOut1"></div>
+				</ul>
+				<ul class="content_box">
+					<li class="bg_img">
+						<img class="animated zoomOut delay-2bans" src="image/audio/1.jpg" alt="">
+					</li>
+					<li class="back_img">
+						<img class="animated fadeIn delay-3s" src="image/one/bg.png" alt="">
+					</li>
+					<li class="meet_box">
+						<img src="image/one/yujian.png" alt="">
+					</li>
+					<li class="ni animated scale1 delay-4bans slow infinite">
+						<img src="image/one/ni.png" alt="">
+					</li>
+					<li class="ni">
+						<img src="image/one/ni.png" alt="">
+					</li>
+					<li class="ai animated scale1 delay-4s slow infinite">
+						<img src="image/one/ai.png" alt="">
+					</li>
+					<li class="ai">
+						<img src="image/one/ai.png" alt="">
+					</li>
+					<li class="just animated fadeIn delay-4s">
+						<img src="image/three/just.png" alt="">
+					</li>
+					<li class="mohu animated fadeIn delay-4s">
+						<img src="image/three/kanbuqing.png" alt="">
+					</li>
+					<li class="text animated fadeIn delay-4bans">
+						<span>因为你我的生活融入了更多的活力</span>
+					</li>
+					<li class="meinv animateds scale delay-3bans">
+						<div class="mask">
+							<img src="./image/three/1.jpg" alt="">
+						</div>
+					</li>
+					<li class="hreat animateds scale delay-4bans">
+						<img src="image/three/heart.png" alt="">
+					</li>
+					<li class="heart_1 animated scale delay-5s slow infinite">
+						<img src="./image/three/hreat.png" alt="">
+					</li>
+					<li class="heart_2 animated scale delay-4s">
+						<img src="./image/three/xin.jpg" alt="">
+					</li>
+					<li class="heart_3 animated scale delay-4s">
+						<img src="./image/three/xin1.jpg" alt="">
+					</li>
+					<li class="text1 animated fadeIn delay-5bans">
+						<span>你的太多我想要懂，</br>就像辽阔世界每个角落。</span>
+					</li>
+					<li class="meinv2 animated slideInLeft delay-5s">
+						<img class=" animated rotate_left delay-5s" src="./image/three/2.jpg" alt="">
+					</li>
+					<li class="meinv3 animated slideInRight delay-5s">
+						<img class=" animated rotate_right delay-5s" src="./image/three/2.jpg" alt="">
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<script src="./js/fullPage.js"></script>
+	<script src="./js/index.js"></script>
+	<script>
+
+		//禁止窗口的默认滑动
+		// document.ontouchmove = function(e){
+		//     e.preventDefault();
+		// };
+
+
+		//框架
+		var runPage,
+			interval,
+			autoPlay;
+
+		// autoPlay = function(to) {
+
+		//     clearTimeout(interval);
+		//     interval = setTimeout(function() {
+		//         runPage.go(to);
+		//     }, 5000);
+
+		// }
+
+		runPage = new FullPage({
+
+			id: 'pageContain',                            // id of contain
+			slideTime: 800,                               // time of slide
+			continuous: true,                             // create an infinite feel with no endpoints
+			effect: {                                     // slide effect
+				transform: {
+					translate: 'Y',                       // 'X'|'Y'|'XY'|'none'
+					scale: [1, 1],                       // [scalefrom, scaleto]
+					rotate: [0, 0]                       // [rotatefrom, rotateto]
+				},
+				opacity: [1, 1]                           // [opacityfrom, opacityto]
+			},
+			mode: 'wheel,touch',               // mode of fullpage
+			easing: 'ease',                                // easing('ease','ease-in','ease-in-out' or use cubic-bezier like [.33, 1.81, 1, 1] )
+			// callback : function(index, thisPage) {
+
+			//     index = index + 1 > 3 ? 0 : index + 1;
+			//     autoPlay(index);
+			// }
+		});
+
+	// interval = setTimeout(function() {
+	//     runPage.go(runPage.thisPage() + 1);
+	// }, 5000);
+
+
+	</script>
+</body>
+
+</html>
